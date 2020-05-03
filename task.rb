@@ -75,28 +75,35 @@ def q9
   names = ["田中", "佐藤", "佐々木", "高橋"]
 
   # 以下に回答を記載
-
+  names.each.with_index(1) do |name,i|
+  p "会員NO.#{i} #{name}さん"
 end
 
 def q10
   foods = %w(いか たこ うに しゃけ うにぎり うに軍艦 うに丼)
 
   # 以下に回答を記載
-
+  foods.each do |food|
+    if food.include?("うに")
+      puts  "#{food}: 好物です"
+    else
+      puts "#{food}:  まあまあ好きです"
+    end
+  end
 end
 
 def q11
   sports = ["サッカー", "バスケ", "野球", ["フットサル", "野球"], "水泳", "ハンドボール", ["卓球", "サッカー", "ボルダリング"]]
 
   # 以下に回答を記載
-
+  puts "NO#{i} #{sport}"
 end
 
 def q12
   data = { user: { name: "satou", age: 33 } }
 
   # 以下に回答を記載
-
+  p data.dig(:user , :name)
 end
 
 def q13
