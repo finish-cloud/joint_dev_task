@@ -66,7 +66,7 @@ def q8
 
   # 以下に回答を記載
   programming_languages.map!(&:capitalize)
-  p upper_case_programming_languages.map {&:upcase }
+  p upper_case_programming_languages.map(&:upcase)
   # 以下は変更しないで下さい
   p programming_languages
   p upper_case_programming_languages
@@ -97,7 +97,7 @@ def q11
   sports = ["サッカー", "バスケ", "野球", ["フットサル", "野球"], "水泳", "ハンドボール", ["卓球", "サッカー", "ボルダリング"]]
 
   # 以下に回答を記載
-  puts "NO#{i} #{sport}"
+   sports.flatten!.uniq!.each.with_index(1) { |sport, i| puts "No#{i} #{sport}" }
 end
 
 def q12
