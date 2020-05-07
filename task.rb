@@ -97,7 +97,8 @@ def q11
   sports = ["サッカー", "バスケ", "野球", ["フットサル", "野球"], "水泳", "ハンドボール", ["卓球", "サッカー", "ボルダリング"]]
 
   # 以下に回答を記載
-   sports.flatten!.uniq!.each.with_index(1) { |sport, i| puts "No#{i} #{sport}" }
+  sports.flatten!.uniq!.each.with_index(1) { |sport, i| puts "No#{i} #{sport}" }
+  puts "No#{i} #{sport}"
 end
 
 def q12
