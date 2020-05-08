@@ -98,7 +98,6 @@ def q11
 
   # 以下に回答を記載
   sports.flatten!.uniq!.each.with_index(1) { |sport, i| puts "No#{i} #{sport}" }
-  puts "No#{i} #{sport}"
 end
 
 def q12
