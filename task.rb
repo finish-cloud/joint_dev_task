@@ -145,7 +145,18 @@ end
 
 class UserQ17
   # 以下に回答を記載
+  def initialize(**name)
+     @name = name
+  end
 
+  def info
+    text = <<~TEXT
+      名前：#{@name[:name]}
+      年齢：#{@name[:age]}
+      性別：#{@name[:gender]}
+    TEXT
+    puts text
+  end
 end
 
 def q17
@@ -160,7 +171,10 @@ end
 
 class UserQ18
   # 以下に回答を記載
-
+  def initialize(name:, age:)
+    @name = name
+    @age = age
+  end
 end
 
 def q18
