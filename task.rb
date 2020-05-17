@@ -145,17 +145,17 @@ end
 
 class UserQ17
   # 以下に回答を記載
-  def initialize(**name)
-     @name = name
+  def initialize(**params)
+    @name = params[:name]
+    @age = params[:age]
+    @gender = params[:gender]
   end
-
   def info
-    text = <<~TEXT
-      名前：#{@name[:name]}
-      年齢：#{@name[:age]}
-      性別：#{@name[:gender]}
+    puts <<~TEXT
+      名前：#{@name}
+      年齢：#{@age}
+      性別：#{@gender}
     TEXT
-    puts text
   end
 end
 
@@ -189,7 +189,7 @@ end
 class Item
   # 以下を修正して下さい
   attr_reader :name
-  def initialize(name)
+  def initialize(name:)
     @name = name
   end
 end
@@ -211,7 +211,7 @@ end
 
 class Zoo
   # 以下に回答を記載
-  def initialize(name:,entry_fee:)
+  def initialize(entry_fee:)
     @infant = entry_fee[:infant]
     @children = entry_fee[:children]
     @adult = entry_fee[:adult]
